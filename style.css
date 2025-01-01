@@ -1,0 +1,724 @@
+/*Fuentes*/
+@font-face {
+  font-family: 'VT323';
+  src: url('fonts/VT323-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Permanent';
+  src: url('fonts/PermanentMarker-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PressStart';
+  src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Variables*/
+body {
+  overflow-x: hidden;
+  background-color: cyan;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Header*/
+header{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+header h1{
+    font-size: 17px;
+    color: red;
+    font-family: 'VT323', sans-serif;
+}
+header h2{
+    font-size: 15px;
+    color: blue;
+    font-family: 'VT323', sans-serif;
+}
+header p{
+  font-family: 'VT323', sans-serif;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*Main*/
+.main-principal{
+  display: flex;
+  justify-content: center;
+}
+.base-amarilla{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 300px;
+      height: 525px;
+      background-color: rgb(224, 224, 19);
+      padding-top: 20px;
+      border-radius: 10px;
+}
+.borde-interior-negro{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 90%;
+          height: 240px;
+          background-color: black;
+          border-radius: 10px;
+          box-shadow: 0px 0px 1px 1px rgba(white, 0.6) inset;
+}
+.borde-interior-negro .image-pikachu{
+              position: absolute;
+              width: 13%;
+              top: 20%;
+              left: 5%;
+}
+.borde-interior-negro .image-pichu{
+              position: absolute;
+              bottom: 52%;
+              width: 16%;
+              right: 6%;
+}
+.borde-interior-negro .power{
+              color: rgba(silver, 0.7);
+              position: absolute;
+              left: 8%;
+              top: 17%;
+              font-size: 7px;
+}
+.borde-interior-negro .punto-rojo{
+              display: none;
+              width: 5px;
+              height: 5px;
+              border-radius: 100%;
+              background-color: red;
+              position: absolute;
+              left: 9.6%;
+              top: 23.6%;
+              box-shadow: 0px 0px 1.5px 1.5px rgb(255, 94, 0);
+}
+.borde-interior-negro .titulo-gameboy{
+              padding-top: 15px;
+              color: silver;
+              font-size: 17px;
+}
+.borde-interior-negro .titulo-gameboy .c-roja{
+                  color: red;
+                  font-family: 'Permanent', sans-serif;
+                  margin-left: 10px;
+}
+.borde-interior-negro .titulo-gameboy .o-azul{
+                  color: blue;
+                  font-family: 'Permanent', sans-serif;
+}
+.borde-interior-negro .titulo-gameboy .l-amarilla{
+                  color: yellow;
+                  font-family: 'Permanent', sans-serif;
+}
+.borde-interior-negro .titulo-gameboy .o-amarilla{
+                  color: yellow;
+                  font-family: 'Permanent', sans-serif;
+}
+.borde-interior-negro .titulo-gameboy .r-azul{
+                  color: blue;
+                  font-family: 'Permanent', sans-serif;
+}
+.borde-interior-negro .pantalla{
+              width: 70%;
+              height: 160px;
+              background-color: #6b6c57;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: 5px 5px 10px #0008 inset,
+                          -2px -1px 10px #0005 inset;
+}
+.borde-interior-negro .pantalla .bienvenida{
+                  visibility: hidden;
+                  opacity: 0;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 5px;
+                  transition: opacity 2s ease, visiblity 2s ease;
+}
+.borde-interior-negro .pantalla .bienvenida .mensaje-bienvenida{
+                      font-size: 13px;
+                      text-align: center;
+                      font-family: 'VT323', sans-serif;
+}
+.borde-interior-negro .pantalla .bienvenida .pokedex{
+                      width: 80%;
+}
+.borde-interior-negro .pantalla .container-pokemon{
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  width: 100%;
+                  gap: 10px;
+}
+.borde-interior-negro .pantalla .container-pokemon .title-pokemon{
+                      width: 50%;
+                      filter: drop-shadow(0px 0px 1px black);
+}
+.borde-interior-negro .pantalla .container-pokemon .info-image-pokemon{
+                      display: flex;
+}
+.borde-interior-negro .pantalla .container-pokemon .info-image-pokemon .image-pokemon{
+                          width: 50%;
+                          margin: 0;
+                          padding: 0;
+                          filter: drop-shadow(0px 0px 5px black);
+}
+.borde-interior-negro .pantalla .container-pokemon .info-image-pokemon .info-pokemon{
+                          width: 50%;
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: center;
+                          align-items: center;
+                          gap: 8px;
+}
+.borde-interior-negro .pantalla .container-pokemon .info-image-pokemon .info-pokemon .name-pokemon{
+                              font-size: 20px;
+                              font-family: 'VT323', sans-serif;
+                              text-transform: uppercase;
+                              text-shadow: 1px 1px 1px white;
+}
+.borde-interior-negro .pantalla .container-pokemon .info-image-pokemon .info-pokemon .weight-pokemon{
+                              font-size: 20px;
+                              font-family: 'VT323', sans-serif;
+                              text-shadow: 1px 1px 1px white;
+}
+.borde-interior-negro .pantalla .container-pokemon .info-image-pokemon .info-pokemon .type-pokemon{
+                              font-size: 20px;
+                                  font-family: 'VT323', sans-serif;
+                              text-transform: uppercase;
+                              text-shadow: 1px 1px 1px white;
+}
+.main-principal .base-amarilla .nintendo{
+          position: absolute;
+          z-index: 1;
+          bottom: 42%;
+          border: 3px solid rgba(0, 0, 0, 0.2);
+          border-radius: 15px;
+          font-size: 18px;
+          padding: 3px 10px;
+          box-shadow: 0px 0px 3px 0px black;
+          background-color: rgb(224, 224, 19);
+}
+.main-principal .base-amarilla .nintendo h5{
+              color: black;
+              opacity: 0.8;
+              margin: 0;
+              padding: 0;
+              text-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.2);
+}
+.cruceta{
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          bottom: 20%;
+          left: 17%;
+}
+.cruceta div{
+              position: absolute;
+              border-radius: 5px;
+              z-index: 1;
+}
+.cruceta .arriba{
+  position: absolute;
+              width: 20px;
+              height: 30px;
+              bottom:65%;
+              background-image: linear-gradient(to bottom,
+              white 3%, blue 13%, blue 100% );
+              z-index: 2;
+              box-shadow: 0px 0px 1px 2px black;
+}
+.cruceta .arriba .raya-1{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 71%;
+                  right: 11%;
+                  rotate: 50deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .arriba .raya-2{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 71%;
+                  right: 40%;
+                  rotate: 120deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .arriba .raya-3{
+                  width: 9px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 57%;
+                  right: 23%;
+                  rotate: 180deg;
+                  box-shadow: 0px 0px 2px 0px black;
+}
+.cruceta .abajo{
+              width: 20px;
+              height: 30px;
+              bottom: 35%;
+              background-color: blue;
+              rotate: 180deg;
+              box-shadow: 0px 0px 1px 2px black;
+              z-index: 2;
+}
+.abajo .raya-1{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 72%;
+                  right: 11%;
+                  rotate: 50deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .abajo .raya-2{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 72%;
+                  right: 40%;
+                  rotate: 120deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .abajo .raya-3{
+                  width: 9px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 60%;
+                  right: 23%;
+                  rotate: 180deg;
+                  box-shadow: 0px 0px 2px 0px black;
+}
+.cruceta .no-shadow-x{
+              width: 20px;
+              height: 33px;
+              background-color: blue;
+              z-index: 4;
+              bottom: 48%;
+}
+.cruceta .derecha{
+              width: 30px;
+              height: 20px;
+              background-image: linear-gradient(to bottom,
+                              white 5%, blue 13%, blue 100% );
+              box-shadow: 0px 0px 1px 2px black,
+                          0px 2px 1px 1px black;
+              bottom: 55%;
+              right: 60%;
+}
+.cruceta .derecha .raya-1{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 58%;
+                  right: 15%;
+                  rotate: 30deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .derecha .raya-2{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 28%;
+                  right: 15%;
+                  rotate: 150deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .derecha .raya-3{
+                  width: 9px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 45%;
+                  right: 25%;
+                  rotate: 90deg;
+                  box-shadow: 0px 0px 2px 0px black;
+}
+.cruceta .izquierda{
+              width: 30px;
+              height: 20px;
+              background-color: blue;
+              bottom: 55%;
+              left: -20%;
+              background-image: linear-gradient(to bottom,
+              white 5%, blue 13%, blue 100% );
+              box-shadow: 0px 0px 1px 2px black,
+                          0px 2px 1px 1px black;
+}
+.izquierda .raya-1{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 30%;
+                  right: 55%;
+                  rotate: 30deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .izquierda .raya-2{
+                  width: 10px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 60%;
+                  right: 55%;
+                  rotate: 150deg;
+                  box-shadow: 0px 0px 2px black;
+}
+.cruceta .izquierda .raya-3{
+                  width: 9px;
+                  height: 1px;
+                  background-color: blue;
+                  bottom: 45%;
+                  right: 45%;
+                  rotate: 90deg;
+                  box-shadow: 0px 0px 2px 0px black;
+}
+.cruceta .no-shadow-y{
+              width: 33px;
+              height: 20px;
+              background-image: linear-gradient(to bottom, 
+              white 5%, blue 13%, blue 100%);
+              z-index: 3;
+              bottom: 55%;
+              left: -7%;
+}
+.cruceta .center{
+              width: 19px;
+              height: 19px;
+              background: conic-gradient(#DDE8F777 0 1%,
+                  transparent 10% 35%, #DDE8F777 50%,
+                  transparent 65% 90%, #DDE8F777 99%);
+              border-radius: 50%;
+              z-index: 6;
+              bottom: 54%;
+}
+.botones{
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          bottom: 115px;
+          right: -3%;
+          display: flex;
+          gap: 5px;
+}
+.botones .boton-b{
+              font-family: Arial, Helvetica, sans-serif;
+              background-color: green;
+              width: 30px;
+              height: 30px;
+              padding: 10px;
+              border-radius: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 40px;
+              color: transparent;
+              text-shadow: 0px 0px 0px black;
+              box-shadow: -0.8px 1px 1px 0.5px rgba(255, 255, 255, 0.9) inset,
+                          -1px 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.botones .boton-a{
+              font-family: Arial, Helvetica, sans-serif;
+              background-color: red;
+              width: 30px;
+              height: 30px;
+              padding: 10px;
+              border-radius: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-top: 15px;
+              color: transparent;
+              text-shadow: 0px 0px 0px black;
+              box-shadow: -0.8px 1px 1px 0.5px rgba(255, 255, 255, 0.9) inset,
+                          -1px 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.logo-pokemon{
+          width: 110px;
+          height: 40px;
+          position: absolute;
+          bottom: 19%;
+}
+.select-start{
+          position: absolute;
+          bottom: 60px;
+          display: flex;
+          gap: 5px;
+}
+.select-start .select{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 3px;
+}
+.select-start .select .boton{
+                  width: 20px;
+                  height: 8px;
+                  background-image: linear-gradient(to bottom, 
+                  white 1%, black 27%, black 100%);
+                  border-radius: 10px;
+                  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+.select-start .select h4{
+                  font-size: 10px;
+                  margin: 0;
+                  padding: 0;
+                  color: rgb(224, 224, 19);
+                  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.select-start .start{
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 3px;
+}
+.select-start .start .boton{
+                  width: 20px;
+                  height: 8px;
+                  border-radius: 10px;
+                  background-image: linear-gradient(to bottom, 
+                  white 1%, black 27%, black 100%);
+                  box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+.select-start .start h4{
+                  font-size: 10px;
+                  margin: 0;
+                  padding: 0;
+                  color: rgb(224, 224, 19);
+                  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.sonido{
+          position: absolute;
+          width: 70px;
+          height: 70px;
+          bottom: 2%;
+          right: 5%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+}
+.sonido .fila-1{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-1 > div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-1 > div:nth-child(even){
+                  background-color: rgba(0, 0, 0, 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+}
+.sonido .fila-1 > div:nth-child(odd){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 255, 255, 0.4) inset;
+}
+.sonido .fila-2{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-2 div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-2 div:nth-child(even){
+                  background-color: rgba(0, 0, 0, 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+}
+.sonido .fila-2 div:nth-child(odd){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 255, 255, 0.4) inset;
+}
+.sonido .fila-3{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-3 div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-3 div:nth-child(odd){
+                  background-color: rgba(0, 0, 0, 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+}
+.sonido .fila-3 div:nth-child(even){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 255, 255, 0.4) inset;
+}
+.sonido .fila-4{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-4 div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-4 div:nth-child(even){
+                  background-color: rgba(0 ,0 ,0 , 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+  }
+.sonido .fila-4 div:nth-child(odd){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 255, 255, 0.4) inset;
+}
+.sonido .fila-5{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-5 div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-5 div:nth-child(odd){
+                  background-color: rgba(0, 0, 0, 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+}
+.sonido .fila-5 div:nth-child(even){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 255, 255, 0.4) inset;
+}
+.sonido .fila-6{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-6 div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-6 div:nth-child(even){
+                  background-color: rgba(0, 0, 0, 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+}
+.sonido .fila-6 div:nth-child(odd){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 255, 255, 0.4) inset;
+}
+.sonido .fila-7{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-7 div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-7 div:nth-child(odd){
+                  background-color: rgba(0, 0, 0, 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+}
+.sonido .fila-7 div:nth-child(even){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 255, 255, 0.4) inset;
+}
+.sonido .fila-8{
+              display: flex;
+              gap: 1px;
+              justify-content: center;
+              align-items: center;
+}
+.sonido .fila-8 div{
+                  width: 4px;
+                  height: 4px;
+                  padding: 3px;
+                  border-radius: 100%;
+}
+.sonido .fila-8 div:nth-child(odd){
+                  background-color: rgba(0, 0, 0, 0.3);
+                  box-shadow: 0px 0.5px 0px 1px rgba(0, 0, 0, 0.7) inset;
+}
+.sonido .fila-8 div:nth-child(even){
+                  background-color: black;
+                  box-shadow: 0px 0.5px 0px 1px rgba(255, 25, 255, 0.4) inset;
+}
+.main-principal .base-amarilla .sombra-left{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 10px;
+          height: 525px;
+          border-radius: 10px;
+          background-image: linear-gradient(to right, 
+                              rgba(0, 0, 0, 0.3) 30%, transparent 80%);
+}
+.main-principal .base-amarilla .sombra-bottom{
+          position: absolute;
+          bottom: 0;
+          width: 298px;
+          height: 15px;
+          border-radius: 10px;
+          background-image: linear-gradient(to bottom,
+                              transparent 10%, rgba(0, 0, 0, 0.3) 90%);
+}
+.main-principal .base-amarilla .sombra-right{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 10px;
+          height: 525px;
+          border-radius: 10px;
+          background-image: linear-gradient(to left, 
+                              rgba(0, 0, 0, 0.3) 30%, transparent 80%);
+}
+.main-principal .base-amarilla .sombra-top{
+          position: absolute;
+          top: 0;
+          width: 300px;
+          height: 10px;
+          border-radius: 10px;
+          background-image: linear-gradient(to bottom, 
+                              rgba(255, 255, 255, 0.8) 30%, transparent 80%);
+}
